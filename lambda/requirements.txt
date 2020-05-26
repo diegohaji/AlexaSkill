@@ -1,0 +1,4 @@
+boto3==1.13.13
+ask-sdk-core==1.13.0
+ask-sdk-s3-persistence-adapter
+pytz
