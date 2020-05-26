@@ -1,0 +1,1665 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "assistente de saúde",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "NascimentoIntent",
+          "slots": [
+            {
+              "name": "dia",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "mes",
+              "type": "AMAZON.Month"
+            },
+            {
+              "name": "ano",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "nascido em  {dia} de {mes} de {ano}",
+            "nasceu no dia {dia} de {mes} do ano {ano}",
+            "nascido na data {dia} de {mes} de {ano}",
+            "nasceu em {dia} de {mes} de {ano}",
+            "nascido {dia} de {mes} de {ano}",
+            "nasceu na data {dia} de {mes} de {ano}"
+          ]
+        },
+        {
+          "name": "PesoIntent",
+          "slots": [
+            {
+              "name": "massa",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "pesa {massa} ",
+            "pesa {massa} quilogramas",
+            "pesa {massa} quilos",
+            "o peso é {massa} quilos",
+            "o peso é {massa}",
+            "o peso é {massa} quilogramas"
+          ]
+        },
+        {
+          "name": "AlturaIntent",
+          "slots": [
+            {
+              "name": "comprimento",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "o tamaho é {comprimento}",
+            "tem {comprimento} de altura",
+            "mede {comprimento}",
+            "a altura é {comprimento}"
+          ]
+        },
+        {
+          "name": "PressaoIntent",
+          "slots": [
+            {
+              "name": "sistolica",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "diastolica",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "pressão {sistolica} por {diastolica}",
+            "a pressão é {sistolica} por {diastolica}"
+          ]
+        },
+        {
+          "name": "ObterIdadeIntent",
+          "slots": [],
+          "samples": [
+            "idade",
+            "tem quantos anos",
+            "Qual a idade"
+          ]
+        },
+        {
+          "name": "ObterPesoIntent",
+          "slots": [],
+          "samples": [
+            "peso",
+            "Quanto pesa",
+            "Qual o peso"
+          ]
+        },
+        {
+          "name": "ObterNascimentoIntent",
+          "slots": [],
+          "samples": [
+            "nascimento",
+            "Quando nasceu",
+            "Data de nascimento"
+          ]
+        },
+        {
+          "name": "ObterAlturaIntent",
+          "slots": [],
+          "samples": [
+            "altura",
+            "Quanto mede",
+            "Qual a altura"
+          ]
+        },
+        {
+          "name": "ObterPressaoIntent",
+          "slots": [],
+          "samples": [
+            "pressão",
+            "Qual o valor da pressão",
+            "Qual a pressão"
+          ]
+        },
+        {
+          "name": "BatimentosIntent",
+          "slots": [
+            {
+              "name": "batidas",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "são {batidas} batimentos cardíacos",
+            "são {batidas} batimentos ",
+            "são {batidas} batidas cardíacas",
+            "Os batimentos são {batidas} batidas cardíacas",
+            "Os batimentos são {batidas} batidas",
+            "Os batimentos são {batidas}"
+          ]
+        },
+        {
+          "name": "ObterBatimentosIntent",
+          "slots": [],
+          "samples": [
+            "batimentos",
+            "Quais são batimentos",
+            "Quais são os batimentos cardíacos",
+            "batimentos cadíacos"
+          ]
+        },
+        {
+          "name": "NomeIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.Person"
+            }
+          ],
+          "samples": [
+            "Alterar ficha {name}",
+            "Alterar prontuario {name}",
+            "Alterar cadastro {name}",
+            "Criar cadastro {name}",
+            "Criar prontuário {name}",
+            "Criar ficha {name}"
+          ]
+        },
+        {
+          "name": "ObterNomeIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.Person"
+            }
+          ],
+          "samples": [
+            "Encontrar registro de {name}",
+            "Buscar registro de {name}"
+          ]
+        },
+        {
+          "name": "ObterDataConsultaIntent",
+          "slots": [
+            {
+              "name": "chave",
+              "type": "palavra_chave"
+            },
+            {
+              "name": "dia_numero",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "mes_numero",
+              "type": "AMAZON.Month"
+            },
+            {
+              "name": "ano_numero",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "Prontuário {chave} {dia_numero} do mês de  {mes_numero} do ano de {ano_numero}",
+            "Prontuário {chave} {dia_numero} de  {mes_numero} de {ano_numero}",
+            "Ficha {chave} {dia_numero} de  {mes_numero} de {ano_numero}",
+            "Arquivo {chave} {dia_numero} do mês de {mes_numero} do ano de {ano_numero}",
+            "Arquivo {chave} {dia_numero} de  {mes_numero} de {ano_numero}",
+            "Ficha {chave} {dia_numero} do mês de {mes_numero} do ano de {ano_numero}"
+          ]
+        },
+        {
+          "name": "SalvarCadastroIntent",
+          "slots": [],
+          "samples": [
+            "Armazenar registro",
+            "Armazenar prontuário",
+            "Armazenar ficha",
+            "Armazenar cadastro",
+            "Guardar registro",
+            "Salvar registro",
+            "Guardar ficha",
+            "Guardar prontuário",
+            "Salvar prontuário",
+            "Salvar ficha",
+            "Guardar cadastro",
+            "Salvar cadastro"
+          ]
+        },
+        {
+          "name": "RegistroGeralIntent",
+          "slots": [
+            {
+              "name": "rg_um",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "rg_dois",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "rg_tres",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "Identidade de número {rg_um} {rg_dois} {rg_tres}",
+            "Identidade {rg_um} {rg_dois} {rg_tres}",
+            "R G número {rg_um} {rg_dois} {rg_tres}",
+            "RG número {rg_um} {rg_dois} {rg_tres}",
+            "Carteira de identidade número {rg_um} {rg_dois} {rg_tres}",
+            "Carteira de identidade {rg_um} {rg_dois} {rg_tres}",
+            "RG {rg_um} {rg_dois} {rg_tres}",
+            "R G {rg_um} {rg_dois} {rg_tres}",
+            "Érri gê {rg_um} {rg_dois} {rg_tres}"
+          ]
+        },
+        {
+          "name": "OrgaoExpedidorIntent",
+          "slots": [
+            {
+              "name": "orgao",
+              "type": "AMAZON.Person"
+            }
+          ],
+          "samples": [
+            "Órgão Expedidor {orgao}"
+          ]
+        },
+        {
+          "name": "ObterRegistroGeralIntent",
+          "slots": [],
+          "samples": [
+            "Identidade",
+            "Carteira de identidade",
+            "Érri gê",
+            "RG",
+            "R G"
+          ]
+        },
+        {
+          "name": "ObterOrgaoExpedidorIntent",
+          "slots": [],
+          "samples": [
+            "Orgão Expedidor"
+          ]
+        },
+        {
+          "name": "CPFIntent",
+          "slots": [
+            {
+              "name": "cpf_um",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "cpf_dois",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "cpf_tres",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "cpf_dv",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "Cê pê efi número {cpf_um} {cpf_dois} {cpf_tres} {cpf_dv} ",
+            "C P F número {cpf_um} {cpf_dois} {cpf_tres} {cpf_dv}",
+            "CPF número {cpf_um} {cpf_dois} {cpf_tres} {cpf_dv}",
+            "Cê pê efi {cpf_um} {cpf_dois} {cpf_tres} {cpf_dv} ",
+            "C P F {cpf_um} {cpf_dois} {cpf_tres} {cpf_dv}",
+            "CPF {cpf_um} {cpf_dois} {cpf_tres} {cpf_dv}"
+          ]
+        },
+        {
+          "name": "ObterCPFIntent",
+          "slots": [],
+          "samples": [
+            "Cê pê efi",
+            "C P F",
+            "CPF"
+          ]
+        },
+        {
+          "name": "SexoIntent",
+          "slots": [
+            {
+              "name": "genero",
+              "type": "genero"
+            }
+          ],
+          "samples": [
+            "o genero é {genero}",
+            "O sexo é {genero}"
+          ]
+        },
+        {
+          "name": "ObterSexoIntent",
+          "slots": [],
+          "samples": [
+            "genero",
+            "sexo"
+          ]
+        },
+        {
+          "name": "NaturalidadeIntent",
+          "slots": [
+            {
+              "name": "pais",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "Naturalidade {pais}",
+            "Natural de {pais}"
+          ]
+        },
+        {
+          "name": "ObterNaturalidadeIntent",
+          "slots": [],
+          "samples": [
+            "Naturalidade",
+            "Natural de onde"
+          ]
+        },
+        {
+          "name": "NacionalidadeIntent",
+          "slots": [
+            {
+              "name": "nacional",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "Nacionalidade  {nacional}"
+          ]
+        },
+        {
+          "name": "ObterNacionalidadeIntent",
+          "slots": [],
+          "samples": [
+            "Nacionalidade"
+          ]
+        },
+        {
+          "name": "EstadoCivilIntent",
+          "slots": [
+            {
+              "name": "estadoCivil",
+              "type": "estadoCivil"
+            }
+          ],
+          "samples": [
+            "Estado civil {estadoCivil}"
+          ]
+        },
+        {
+          "name": "ObterEstadoCivilIntent",
+          "slots": [],
+          "samples": [
+            "Estado civil"
+          ]
+        },
+        {
+          "name": "ProfissaoIntent",
+          "slots": [
+            {
+              "name": "trabalho",
+              "type": "AMAZON.Person"
+            }
+          ],
+          "samples": [
+            "Profissão {trabalho}"
+          ]
+        },
+        {
+          "name": "ObterProfissaoIntent",
+          "slots": [],
+          "samples": [
+            "Profissão"
+          ]
+        },
+        {
+          "name": "TelefoneIntent",
+          "slots": [
+            {
+              "name": "numero_telefone",
+              "type": "AMAZON.PhoneNumber"
+            }
+          ],
+          "samples": [
+            "telefone {numero_telefone}"
+          ]
+        },
+        {
+          "name": "ObterTelefoneIntent",
+          "slots": [],
+          "samples": [
+            "Telefone"
+          ]
+        },
+        {
+          "name": "CelularIntent",
+          "slots": [
+            {
+              "name": "numero_celular",
+              "type": "AMAZON.PhoneNumber"
+            }
+          ],
+          "samples": [
+            "Celular {numero_celular}"
+          ]
+        },
+        {
+          "name": "ObterCelularIntent",
+          "slots": [],
+          "samples": [
+            "Celular"
+          ]
+        },
+        {
+          "name": "EmailIntent",
+          "slots": [
+            {
+              "name": "nick",
+              "type": "AMAZON.Person"
+            },
+            {
+              "name": "at",
+              "type": "arroba"
+            },
+            {
+              "name": "host",
+              "type": "AMAZON.Person"
+            }
+          ],
+          "samples": [
+            "Email {nick} {at} {host}"
+          ]
+        },
+        {
+          "name": "ObterEmailIntent",
+          "slots": [],
+          "samples": [
+            "Email"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "do dia"
+              }
+            }
+          ],
+          "name": "palavra_chave"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "não declarar",
+                "synonyms": [
+                  "nd"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "feminino",
+                "synonyms": [
+                  "f",
+                  "fem"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "masculino",
+                "synonyms": [
+                  "m",
+                  "masc"
+                ]
+              }
+            }
+          ],
+          "name": "genero"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Viúvo",
+                "synonyms": [
+                  "Viúva"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Divorciado",
+                "synonyms": [
+                  "Divorciada"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Seperado",
+                "synonyms": [
+                  "Separada"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Casado",
+                "synonyms": [
+                  "Casada"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Solteiro",
+                "synonyms": [
+                  "Solteira"
+                ]
+              }
+            }
+          ],
+          "name": "estadoCivil"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "arroba",
+                "synonyms": [
+                  "@",
+                  "at"
+                ]
+              }
+            }
+          ],
+          "name": "arroba"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Desconhecido",
+                "synonyms": [
+                  "desconhecidas",
+                  "desconhecidos",
+                  "desconhecida"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Negativo",
+                "synonyms": [
+                  "negativas",
+                  "negativos",
+                  "negativa"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Positivo",
+                "synonyms": [
+                  "positivas",
+                  "positivos",
+                  "positiva"
+                ]
+              }
+            }
+          ],
+          "name": "opcaoMultiplaEscolhaPadrao"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "fim"
+              }
+            },
+            {
+              "name": {
+                "value": "terminar"
+              }
+            },
+            {
+              "name": {
+                "value": "encerrar"
+              }
+            }
+          ],
+          "name": "encerrar"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "diariamente"
+              }
+            },
+            {
+              "name": {
+                "value": "na semana"
+              }
+            },
+            {
+              "name": {
+                "value": "ao dia"
+              }
+            },
+            {
+              "name": {
+                "value": "por hora"
+              }
+            },
+            {
+              "name": {
+                "value": "hora"
+              }
+            },
+            {
+              "name": {
+                "value": "por semana"
+              }
+            },
+            {
+              "name": {
+                "value": "por dia"
+              }
+            },
+            {
+              "name": {
+                "value": "semana"
+              }
+            },
+            {
+              "name": {
+                "value": "dia"
+              }
+            }
+          ],
+          "name": "peridiocidade"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "gramas"
+              }
+            },
+            {
+              "name": {
+                "value": "gotas"
+              }
+            },
+            {
+              "name": {
+                "value": "comprimidos"
+              }
+            },
+            {
+              "name": {
+                "value": "miligramas"
+              }
+            },
+            {
+              "name": {
+                "value": "miligotas"
+              }
+            }
+          ],
+          "name": "formatoMedicacao"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "iniciar"
+              }
+            },
+            {
+              "name": {
+                "value": "startar"
+              }
+            },
+            {
+              "name": {
+                "value": "começar"
+              }
+            },
+            {
+              "name": {
+                "value": "inicio"
+              }
+            }
+          ],
+          "name": "iniciar"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Negativo"
+              }
+            },
+            {
+              "name": {
+                "value": "Positivo "
+              }
+            },
+            {
+              "name": {
+                "value": "Complicada",
+                "synonyms": [
+                  "Complicado"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Durante a higiene"
+              }
+            },
+            {
+              "name": {
+                "value": "As vezes",
+                "synonyms": [
+                  "Algumas vezes"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Controlada",
+                "synonyms": [
+                  "Controlada com medicamento",
+                  "Controlado com medicamento",
+                  "Controlado"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Excessivo",
+                "synonyms": [
+                  "Excessiva"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Baixa",
+                "synonyms": [
+                  "Baixo"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Alta",
+                "synonyms": [
+                  "Alto"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Normal"
+              }
+            }
+          ],
+          "name": "opcaoMultiplaEscolhaPadraoDois"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "NascimentoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "dia",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.153285199386.325098583197"
+              }
+            },
+            {
+              "name": "mes",
+              "type": "AMAZON.Month",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.153285199386.179323505620"
+              }
+            },
+            {
+              "name": "ano",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.153285199386.930924231576"
+              }
+            }
+          ]
+        },
+        {
+          "name": "PesoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "massa",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.159541009738.545970819739"
+              }
+            }
+          ]
+        },
+        {
+          "name": "AlturaIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "comprimento",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.638975776015.1569475396166"
+              }
+            }
+          ]
+        },
+        {
+          "name": "PressaoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "sistolica",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.514747035113.327203519217"
+              }
+            },
+            {
+              "name": "diastolica",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.514747035113.235636102858"
+              }
+            }
+          ]
+        },
+        {
+          "name": "BatimentosIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "batidas",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.674842689786.1112604147296"
+              }
+            }
+          ]
+        },
+        {
+          "name": "NomeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.128913539942.651664072752"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ObterNomeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1521690291511.471814907651"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ObterDataConsultaIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "chave",
+              "type": "palavra_chave",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.511523570153.826573333067"
+              }
+            },
+            {
+              "name": "dia_numero",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.511523570153.820301994982"
+              }
+            },
+            {
+              "name": "mes_numero",
+              "type": "AMAZON.Month",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.511523570153.1539359154784"
+              }
+            },
+            {
+              "name": "ano_numero",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.511523570153.791623490775"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RegistroGeralIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "rg_um",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1377541657578.1193563169732"
+              }
+            },
+            {
+              "name": "rg_dois",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1377541657578.414206431373"
+              }
+            },
+            {
+              "name": "rg_tres",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1377541657578.853967809771"
+              }
+            }
+          ]
+        },
+        {
+          "name": "OrgaoExpedidorIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "orgao",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.924456659132.1573271015262"
+              }
+            }
+          ]
+        },
+        {
+          "name": "CPFIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "cpf_um",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.127340442165.41647003567"
+              }
+            },
+            {
+              "name": "cpf_dois",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.127340442165.641557952137"
+              }
+            },
+            {
+              "name": "cpf_tres",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.127340442165.728870642470"
+              }
+            },
+            {
+              "name": "cpf_dv",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.127340442165.991594845543"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SexoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "genero",
+              "type": "genero",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.559218865226.1526844446013"
+              }
+            }
+          ]
+        },
+        {
+          "name": "NaturalidadeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "pais",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1373952961044.306818242193"
+              }
+            }
+          ]
+        },
+        {
+          "name": "NacionalidadeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "nacional",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.832325723335.943828623177"
+              }
+            }
+          ]
+        },
+        {
+          "name": "EstadoCivilIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "estadoCivil",
+              "type": "estadoCivil",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.787635406063.1272965052511"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ProfissaoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "trabalho",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1480642618409.810746972895"
+              }
+            }
+          ]
+        },
+        {
+          "name": "TelefoneIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "numero_telefone",
+              "type": "AMAZON.PhoneNumber",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.475955544696.871843085465"
+              }
+            }
+          ]
+        },
+        {
+          "name": "CelularIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "numero_celular",
+              "type": "AMAZON.PhoneNumber",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1088234686572.162731593241"
+              }
+            }
+          ]
+        },
+        {
+          "name": "EmailIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "nick",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.68204025719.852381067797"
+              }
+            },
+            {
+              "name": "at",
+              "type": "arroba",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.68204025719.241399752532"
+              }
+            },
+            {
+              "name": "host",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.68204025719.176217295804"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.153285199386.325098583197",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Em que dia nasceu?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.153285199386.179323505620",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Em que mês nasceu?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.153285199386.930924231576",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Em que ano nasceu?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.871847371149.774519329126",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são seus batimentos?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.457265403275.1513794600988",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a sua pressão sistólica?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.457265403275.1212385629367",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a sua pressão diastólica?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.762135864505.1345394100004",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a sua altura em metros?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.762135864505.120999878394",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "e centimetros?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.159541009738.545970819739",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o peso em quilogramas?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.638975776015.170437007427",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Você pode dizer, por exemplo, tenho um vírgula oito de altura. Qual a sua altura?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Qual a sua altura?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.638975776015.1569475396166",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a altura em centímetros?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.514747035113.327203519217",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a pressão sistolica?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.514747035113.235636102858",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a pressão diastólica?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.674842689786.1112604147296",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são os batimentos cardíacos?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.128913539942.651664072752",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o nome que deseja cadastrar?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1521690291511.471814907651",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o nome deseja encontrar?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.126659287645",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Os dados para busca estão corretos?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.897937901528.737692659702",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "O dia {dia_numero} está correto?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.897937901528.565596427969",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "O ano {ano_numero} está correto?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.897937901528.1139878389794",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "O mês {mes_numero} está correto?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.897937901528.1041826395190",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "O nome {name} está correto?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.511523570153.826573333067",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "É necessário dizer as palavras \u0027do dia\u0027"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.511523570153.820301994982",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o dia?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.511523570153.1539359154784",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o mês?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.511523570153.791623490775",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o ano?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1377541657578.1193563169732",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são os dois primeiros digitos da sequencia por extenso, como, por exemplo,  vinte e um ou  quarenta e cinco. Caso a sequencia comece com zero, pode-se omitir esse digito e dizer apenas o outro, como, por exemplo dois."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1377541657578.414206431373",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são os terceiro, quarto e quinto digitos da sequencia por extenso, como, por exemplo,  cento e vinte e um ou trezentos e quarenta e cinco. Caso a sequencia comece com zero, pode-se omitir esse digito e dizer apenas os outros, como, por exemplo sessenta e dois."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1377541657578.853967809771",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são os sexto, sétimo e oitavo digitos da sequencia por extenso, como, por exemplo,  cento e vinte e um ou trezentos e quarenta e cinco. Caso a sequencia comece com zero, pode-se omitir esse digito e dizer apenas os outros, como, por exemplo sessenta e dois."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.924456659132.1573271015262",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o orgão expedidor, um exemplo é PMMG."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.127340442165.41647003567",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são os três primeiros digitos da sequencia por extenso, como, por exemplo,  cento e vinte e um ou trezentos e quarenta e cinco. Caso a sequencia comece com zero, pode-se omitir esse digito e dizer apenas os outros, como, por exemplo sessenta e dois."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.127340442165.641557952137",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são os quarto, quinto e sexto digitos da sequencia por extenso, como, por exemplo,  cento e vinte e um ou trezentos e quarenta e cinco. Caso a sequencia comece com zero, pode-se omitir esse digito e dizer apenas os outros, como, por exemplo sessenta e dois."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.127340442165.728870642470",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são os sétimo, oitavo e nono digitos da sequencia por extenso, como, por exemplo,  cento e vinte e um ou trezentos e quarenta e cinco. Caso a sequencia comece com zero, pode-se omitir esse digito e dizer apenas os outros, como, por exemplo sessenta e dois."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.127340442165.991594845543",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quais são os dois digitos verificadores da sequencia por extenso, como, por exemplo,  vinte e um ou quarenta e cinco. Caso a sequencia comece com zero, pode-se omitir esse digito e dizer apenas o outro, como, por exemplo dois."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.559218865226.1526844446013",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o sexo. Pode ser masculino, feminino, ou não declarar. Caso não deseje declarar, diga não declarar"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1373952961044.306818242193",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o país de nascimento?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.832325723335.943828623177",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a nacionalidade?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.787635406063.1272965052511",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o estado civil?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1480642618409.810746972895",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a profissão?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.475955544696.871843085465",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o número de telefone?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1088234686572.162731593241",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o número de celular?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.68204025719.852381067797",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o nome?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.68204025719.241399752532",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Por favor, diga arroba"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.68204025719.176217295804",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual o provedor?"
+          }
+        ]
+       }
+    ]
+  },
+  "version": "121"
+}
