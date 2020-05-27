@@ -189,7 +189,7 @@ def filtrar_s3_file(bucket, prefix):
         ) # metodo de acesso direto ao Bucket. utiliza as credenciais root
     
     try:
-        mybucket = s3.Bucket("alexaaws-diegocampos")
+        mybucket = s3.Bucket(bucket)
         for files in mybucket.objects.filter(Prefix=prefix):
             separar = files.key.split("/")
             data = separar[1]
